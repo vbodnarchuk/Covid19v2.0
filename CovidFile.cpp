@@ -52,7 +52,7 @@ int main() {
 	Sleep(500);
 	cout << ("The program have accuraty 85 - 99%") << endl;
 	Sleep(500);
-	cout << ("Instagram @tolik_voldemar") << endl;
+	cout << ("Instagram @viiiiiiiitya") << endl;
 	Sleep(500);
 	cout << ("Please stay home") << endl;
 	Sleep(500);
