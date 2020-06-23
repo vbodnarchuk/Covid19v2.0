@@ -144,11 +144,11 @@ int main() {
 	cout << ("How many people are death today") << endl;
 	cin >> user_correct_death;
 	d = d - 1;
-	if (user_first_day_correct >= user_second_day_correct ) {
+	if (user_first_day_correct >= user_second_day_correct || user_first_day_correct >= user_third_day_correct || user_second_day_correct >= user_third_day_correct || user_correct_death >= user_third_day_correct || user_correct_death <= 0) {
 		cout << ("Error") << endl;
 		goto final;
 	}
-	if (user_first_day_correct >= user_third_day_correct) {
+	/*if (user_first_day_correct >= user_third_day_correct) {
 		cout << ("Error") << endl;
 		goto final;
 	}
@@ -163,13 +163,13 @@ int main() {
 	if (user_correct_death <= 0) {
 		cout << ("Error") << endl;
 		goto final;
-	}
+	}*/
 	cout << ("The program is learning, please wait") << endl;
 	for (int c = 0; c < 1000000; c++) {
 		w4 = 1 + rand() % 5000;
 			w5 = w4 + w3 / 2;
 			q = user_second_day_correct - user_first_day_correct;
-			correct_init = user_second_day_correct + q + q * Nnasel / w5;//Нейрон
+			correct_init = user_second_day_correct + q + q * Nnasel / w5;
 			if (correct_init < user_third_day_correct) {
 				if (correct_init / user_third_day_correct * 100 > 93)
 					break;
@@ -183,13 +183,13 @@ int main() {
 		w6 = 1 + rand() % 5000;
 		w7 = w6 + w5 / 2;
 		q = user_second_day_correct - user_first_day_correct;
-		correct_init = user_second_day_correct + q + q * Nnasel / w7;//Нейрон
+		correct_init = user_second_day_correct + q + q * Nnasel / w7;
 		if (correct_init < user_third_day_correct) {
-			if (correct_init / user_third_day_correct * 100 > 96)
+			if (correct_init / user_third_day_correct * 100 > 98)
 				break;
 		}
 		else {
-			if (user_third_day_correct / correct_init * 100 > 96)
+			if (user_third_day_correct / correct_init * 100 > 98)
 				break;
 		}
 	}
@@ -221,12 +221,12 @@ int main() {
 		correct_init3 = second_day_correct[st] + q + q * Nnasel / w911;//Нейрон
 		if (correct_init3 < third_day_correct[st]) {
 			w911 = w911 - 1;
-			if (correct_init3 / third_day_correct[st] * 100 > 98)
+			if (correct_init3 / third_day_correct[st] * 100 > 99)
 				break;
 		}
 		else {
 			w911 = w911 + 1;
-			if (third_day_correct[st] / correct_init3 * 100 > 98)
+			if (third_day_correct[st] / correct_init3 * 100 > 99)
 				break;
 		}
 		if (st == sizeof(first_day_correct) / sizeof(first_day_correct[0]) - 1) {
@@ -253,20 +253,20 @@ int main() {
 	N1 = user_third_day_correct;
 	N2 = correct_init;
 	b = 0;
-	for (int a = 0; a < d; a++) {
+	for (int a = 1; a <= d; a++) {
 		b = N2 - N1;
 		N1 = N2;
 		N2 = N2 + b + b * Nnasel / stats;
-		cout << ("In ") << a + 2 << (" day will be: ");
+		cout << ("In ") << a + 1 << (" day will be: ");
 		cout << N2 << endl;
-		cout << ("In ") << a + 2 << (" day will be dead people: ");
+		cout << ("In ") << a + 1 << (" day will be dead people: ");
 		D1 = N2 / death_stats;
 		cout << D1<< endl;
 		infect_day = b + b * Nnasel / stats;
-		cout << infect_day << (" infected people per ") << a + 2 << (" day") << endl;
+		cout << infect_day << (" infected people per ") << a + 1 << (" day") << endl;
 		Sleep(200);
 		if (N2 >= 7780000000) {
-			cout << ("All people will be infected after ") << a + 2 << (" days") << endl;//Весь світ заражений
+			cout << ("All people will be infected after ") << a + 1 << (" days") << endl;//Весь світ заражений
 			break;
 		}
 		if (N1 >= N2) {
