@@ -59,10 +59,10 @@ int main() {
 	cout << ("How many people live in 1km^2") << endl;
 	cin >> Nnasel;
 	cout << ("The program is learning, please wait") << endl;
-	for (int a = 1; a < 1000000; a++) { //Перша стадія навчання 90% точності
+	for (int a = 1; a < 1000000; a++) { //ГЏГҐГ°ГёГ  Г±ГІГ Г¤ВіГї Г­Г ГўГ·Г Г­Г­Гї 90% ГІГ®Г·Г­Г®Г±ГІВі
 		w1 = 2 + rand() % 1000;
 		q = second_day_correct[st] - first_day_correct[st];
-		correct_init = second_day_correct[st] + q + q*Nnasel / w1;//Нейрон
+		correct_init = second_day_correct[st] + q + q*Nnasel / w1;//ГЌГҐГ©Г°Г®Г­
 		if (correct_init < third_day_correct[st]) {
 
 			if (correct_init/third_day_correct[st] * 100 > 90)
@@ -77,10 +77,10 @@ int main() {
 		}
 		st++;
 	}
-	for (int f = 1; f < 1000000; f++) { //Перша стадія навчання 90% точності допоміжна
+	for (int f = 1; f < 1000000; f++) { //ГЏГҐГ°ГёГ  Г±ГІГ Г¤ВіГї Г­Г ГўГ·Г Г­Г­Гї 90% ГІГ®Г·Г­Г®Г±ГІВі Г¤Г®ГЇГ®Г¬ВіГ¦Г­Г 
 		w11 = 2 + rand() %2000;
 		q = second_day_correct[st] - first_day_correct[st];
-		correct_init1 = second_day_correct[st] + q + q * Nnasel / w11;//Нейрон
+		correct_init1 = second_day_correct[st] + q + q * Nnasel / w11;//ГЌГҐГ©Г°Г®Г­
 		if (correct_init1 < third_day_correct[st]) {
 			if (correct_init1 / third_day_correct[st] * 100 > 90)
 				break;
@@ -95,11 +95,11 @@ int main() {
 	}
 	st = 0;
 	w1 = w1 + w11 / 2;
-	for (int b = 1; b < 1000000; b++) { //Друга стадія навчання 95% точності
+	for (int b = 1; b < 1000000; b++) { //Г„Г°ГіГЈГ  Г±ГІГ Г¤ВіГї Г­Г ГўГ·Г Г­Г­Гї 95% ГІГ®Г·Г­Г®Г±ГІВі
 		w2 = 2 + rand() % 2000;
 		w3 = w1 + w2 / 2;
 		q = second_day_correct[st] - first_day_correct[st];
-		correct_init = second_day_correct[st] + q+ q* Nnasel/w3;//Нейрон
+		correct_init = second_day_correct[st] + q+ q* Nnasel/w3;//ГЌГҐГ©Г°Г®Г­
 		if (correct_init < third_day_correct[st]) {
 			if (correct_init / third_day_correct[st] * 100 > 96)
 				break;
@@ -113,11 +113,11 @@ int main() {
 		}
 		st++;
 	}
-	for (int h = 1; h < 1000000; h++) { //Друга стадія навчання 95% точності допоміжна
+	for (int h = 1; h < 1000000; h++) { //Г„Г°ГіГЈГ  Г±ГІГ Г¤ВіГї Г­Г ГўГ·Г Г­Г­Гї 95% ГІГ®Г·Г­Г®Г±ГІВі Г¤Г®ГЇГ®Г¬ВіГ¦Г­Г 
 		w21 = 1 + rand() % 2000;
 		w31 = w1 + w2 / 2;
 		q = second_day_correct[st] - first_day_correct[st];
-		correct_init2 = second_day_correct[st] + q + q * Nnasel / w31;//Нейрон
+		correct_init2 = second_day_correct[st] + q + q * Nnasel / w31;//ГЌГҐГ©Г°Г®Г­
 		if (correct_init2 < third_day_correct[st]) {
 			if (correct_init2 / third_day_correct[st] * 100 > 96)
 				break;
@@ -132,7 +132,7 @@ int main() {
 		st++;
 	}
 	w3 = w3 + w31;
-	//----------------------------------------------Опитування---------------------------------------------------------------------------
+	//----------------------------------------------ГЋГЇГЁГІГіГўГ Г­Г­Гї---------------------------------------------------------------------------
 	cout << ("How many people were infected 2 days ago") << endl;
 	cin >> user_first_day_correct;
 	cout << ("How many people were infected yesterday") << endl;
@@ -193,12 +193,12 @@ int main() {
 				break;
 		}
 	}
-	//-------------------------------------------------Коректировка------------------------------------
-	for (int x = 1; x < 1000000; x++) { //Коректировка з базою данних
+	//-------------------------------------------------ГЉГ®Г°ГҐГЄГІГЁГ°Г®ГўГЄГ ------------------------------------
+	for (int x = 1; x < 1000000; x++) { //ГЉГ®Г°ГҐГЄГІГЁГ°Г®ГўГЄГ  Г§ ГЎГ Г§Г®Гѕ Г¤Г Г­Г­ГЁГµ
 		w8 = 1 + rand() % 2000;
 		w9 = w7 + w8 / 2;
 		q = second_day_correct[st] - first_day_correct[st];
-		correct_init4 = second_day_correct[st] + q + q * Nnasel / w9;//Нейрон
+		correct_init4 = second_day_correct[st] + q + q * Nnasel / w9;//ГЌГҐГ©Г°Г®Г­
 		if (correct_init4 < third_day_correct[st]) {
 			if (correct_init4 / third_day_correct[st] * 100 > 96)
 				break;
@@ -213,12 +213,12 @@ int main() {
 		st++;
 		
 	}
-	for (int xx = 1; xx < 1000000; xx++) { //Коректировка з базою данних допоміжна
+	for (int xx = 1; xx < 1000000; xx++) { //ГЉГ®Г°ГҐГЄГІГЁГ°Г®ГўГЄГ  Г§ ГЎГ Г§Г®Гѕ Г¤Г Г­Г­ГЁГµ Г¤Г®ГЇГ®Г¬ВіГ¦Г­Г 
 		w81 = 1 + rand() % 2000;
 		w91 = w7 + w81 / 2;
 		w911 = w91 + w911 / 2;
 		q = second_day_correct[st] - first_day_correct[st];
-		correct_init3 = second_day_correct[st] + q + q * Nnasel / w911;//Нейрон
+		correct_init3 = second_day_correct[st] + q + q * Nnasel / w911;//ГЌГҐГ©Г°Г®Г­
 		if (correct_init3 < third_day_correct[st]) {
 			w911 = w911 - 1;
 			if (correct_init3 / third_day_correct[st] * 100 > 99)
@@ -235,7 +235,7 @@ int main() {
 		st++;
 
 	}
-	//--------------------------------------------Визначення хворих-----------------------------------
+	//--------------------------------------------Г‚ГЁГ§Г­Г Г·ГҐГ­Г­Гї ГµГўГ®Г°ГЁГµ-----------------------------------
 	stats = w9;
 	death_stats = user_third_day_correct / user_correct_death;
 	q = user_third_day_correct - user_second_day_correct;
@@ -266,17 +266,17 @@ int main() {
 		cout << infect_day << (" infected people per ") << a + 1 << (" day") << endl;
 		Sleep(200);
 		if (N2 >= 7780000000) {
-			cout << ("All people will be infected after ") << a + 1 << (" days") << endl;//Весь світ заражений
+			cout << ("All people will be infected after ") << a + 1 << (" days") << endl;//Г‚ГҐГ±Гј Г±ГўВіГІ Г§Г Г°Г Г¦ГҐГ­ГЁГ©
 			break;
 		}
 		if (N1 >= N2) {
-			cout << ("Error...") << endl;// Помилка
+			cout << ("Error...") << endl;// ГЏГ®Г¬ГЁГ«ГЄГ 
 			break;
 		}
 	}
 	cout << ("Please stay home") << endl;
 	final:
-	cout << ("Press any key to close the console...");
+	cout << ("Press any key to close the window...");
 	_getch();
 	return 0;
 }
