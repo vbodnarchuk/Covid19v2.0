@@ -59,7 +59,7 @@ int main() {
 	cout << ("How many people live in 1km^2") << endl;
 	cin >> Nnasel;
 	cout << ("The program is learning, please wait") << endl;
-	for (int a = 1; a < 1000000; a++) { //Ïåðøà ñòàä³ÿ íàâ÷àííÿ 90% òî÷íîñò³
+	for (int a = 1; a < 1000000; a++) {
 		w1 = 2 + rand() % 1000;
 		q = second_day_correct[st] - first_day_correct[st];
 		correct_init = second_day_correct[st] + q + q*Nnasel / w1;//Íåéðîí
